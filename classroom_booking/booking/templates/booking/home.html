@@ -6,10 +6,16 @@
 
 <div>
 
+    <a href="{% url 'create-room' %}">Create Room</a>
+    <hr>
+
     <div>
         {% for room in rooms %}
             <div>
-                <h5>{{room.id}} -- <a href="/room/{{room.id}}">{{room.name}}</a></h5>
+                <a href="{% url 'update-room' room.room_id %}">Edit</a>
+                <h5>{{room.room_id}} -- <a href="/room/{{room.room_id}}">{{room.room_name}}</a></h5>
+                <a href="{% url 'delete-room' room.room_id %}">Delete</a>
+                <hr>
             </div>
         {% endfor %}
     </div>
