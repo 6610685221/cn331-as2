@@ -1,0 +1,26 @@
+{% extends 'main.html' %} 
+
+{% block content %}
+
+<div class="schedule-container">
+    <h2>My Bookings</h2>
+    <hr>
+
+    {% for booking in bookings %}
+        <div class="booking-item">
+            <h3>{{ booking.room.room_name }}</h3>
+            <p><strong>ID:</strong> {{ booking.room.room_id }}</p>
+            <p><strong>escription:</strong> {{ booking.room.description }}</p>
+        </div>
+        <div class="booking-actions">
+            <a href="{% url 'cancel-booking' booking.room.room_id %}" class="btn btn-danger">Cancel</a>
+            <hr>
+        </div>
+
+    {% empty %}
+        <p>You have no scheduled bookings.</p>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

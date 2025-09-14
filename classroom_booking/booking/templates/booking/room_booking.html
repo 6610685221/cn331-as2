@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="confirmation-container">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>Are you sure you want to book this room?</p>
+        <a href="{{request.META.HTTP_REFERER}}" class="btn btn-secondary">Go Back</a>
+        <input type="submit" value="Confirm Booking" class="btn btn-primary" />
+    </form>
+</div>
+{% endblock %}

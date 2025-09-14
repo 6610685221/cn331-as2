@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="confirmation-container">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>ยืนยันการยกเลิกการจองห้องนี้?</p>
+        <a href="{% url 'schedule' %}" class="btn btn-secondary">Go Back</a>
+        <button type="submit" class="btn btn-danger">Confirm Cancel</button>
+    </form>
+</div>
+{% endblock %}

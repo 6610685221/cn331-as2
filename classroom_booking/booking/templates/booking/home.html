@@ -1,25 +1,24 @@
 {% extends 'main.html' %}
 
 {% block content %}
-
-<h3>home page</h3>
-
-<div>
-
-    <a href="{% url 'create-room' %}">Create Room</a>
+<div class="home-container">
+    <div class="home-header">
+        <h2>Available Rooms</h2>
+        {% if request.user.is_superuser %}
+            <a href="{% url 'create-room' %}" class="btn btn-primary">Create Room</a>
+        {% endif %}
+    </div>
     <hr>
-
-    <div>
+    <div class="room-list">
         {% for room in rooms %}
-            <div>
-                <a href="{% url 'update-room' room.room_id %}">Edit</a>
-                <h5>{{room.room_id}} -- <a href="/room/{{room.room_id}}">{{room.room_name}}</a></h5>
-                <a href="{% url 'delete-room' room.room_id %}">Delete</a>
-                <hr>
+            <div class="room-item">
+                <div>
+                    <h5><a href="{% url 'room' room.room_id %}" class="room-name">{{room.room_name}}</a> ({{room.room_id}})</h5>
+                    <p class="room-status">สถานะห้อง: {{ room.status|yesno:"เปิดให้บริการ,ปิดให้บริการ" }}</p>
+                </div>
+                <a href="{% url 'room' room.room_id %}" class="btn btn-secondary">View Details</a>
             </div>
         {% endfor %}
     </div>
-
 </div>
-
 {% endblock %}
