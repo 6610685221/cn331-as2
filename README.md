@@ -2,8 +2,8 @@
 ## เนตรชนก ยินดี 6610685221
 # ระบบจองห้องเรียน (Classroom Booking System)
 
-[classroom-booking web](https://cn331-as2-905l.onrender.com)
-[คลิปวิดีโอสาธิต classroom-booking บน clound](https://youtu.be/x3lM5A9UqMc)
+[classroom-booking web](https://cn331-as2-905l.onrender.com)  
+[คลิปวิดีโอสาธิต classroom-booking บน clound](https://youtu.be/x3lM5A9UqMc)  
 **Classroom Booking System** เป็นเว็บแอปพลิเคชันที่พัฒนาขึ้นด้วย Django Framework สำหรับจัดการและจองห้องเรียนออนไลน์ ผู้ใช้ทั่วไปสามารถสมัครสมาชิก, ค้นหาห้องที่ต้องการ, และทำการจองห้องที่ยังว่างอยู่ได้ ในขณะที่ผู้ดูแลระบบสามารถจัดการข้อมูลห้องทั้งหมดได้อย่างง่ายดาย
 
 ## คุณสมบัติหลัก (Key Features)
