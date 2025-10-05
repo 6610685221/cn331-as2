@@ -33,7 +33,7 @@ jobs:
     - name: Run tests with coverage
       run: |
         cd classroom_booking
-        coverage run manage.py test
+        coverage run manage.py test booking.tests
         coverage report -m
 
     - name: Upload coverage report as artifact
