@@ -27,10 +27,12 @@ jobs:
 
     - name: Run migrations
       run: |
+        cd classroom_booking
         python manage.py migrate
 
     - name: Run tests with coverage
       run: |
+        cd classroom_booking
         coverage run manage.py test
         coverage report -m
 
